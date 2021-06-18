@@ -25,7 +25,7 @@ namespace student_training_app.Controllers
 
         public IActionResult Students()
         {
-            return View();
+            return View("Students", StudentDataStore.GetStudentData());
         }
     }
 }

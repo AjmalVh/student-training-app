@@ -7,3 +7,26 @@
 <div class="text-center">
     <h1 class="display-4">Students List</h1>
 </div>
+<br/>
+<br/>
+<div>
+<table>
+  <tr>
+    <th>Student ID</th>
+    <th>Student Name</th>
+    <th>Age</th>
+    <th>School</th>
+  </tr>
+  @{
+    foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+            <td>@item.School</td>
+        </tr>
+    }
+  }
+</table>
+</div>

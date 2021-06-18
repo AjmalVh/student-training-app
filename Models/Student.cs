@@ -8,5 +8,5 @@ public class Student
 
     public int Age { get; set; }
 
-    public int School { get; set; }
+    public string School { get; set; }
 }
