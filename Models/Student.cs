@@ -1,5 +1,5 @@
 
-// class to hold student details
+// Class to hold student details
 public class Student
 {
     public int Id { get; set; }
@@ -9,4 +9,6 @@ public class Student
     public int Age { get; set; }
 
     public string School { get; set; }
+
+    public string City { get; set; }
 }
