@@ -6,7 +6,7 @@ using Dapper;
 
 public class StudentData
 {
-    private string ConnectionString { get; set; } = "CONNECTION STRING HERE";
+    private string ConnectionString { get; set; } = "Server=tcp:avh-db.database.windows.net,1433;Initial Catalog=student-training-db;Persist Security Info=False;User ID=ajmalvh;Password=Password777!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
     //Get database connectivity
     public IDbConnection GetDatabaseConnection()
@@ -19,7 +19,7 @@ public class StudentData
     public List<Student> GetAllStudents()
     {
         var databaseConnection = GetDatabaseConnection();       
-        var query = "SELECT Id, Name, Age, School FROM StudentTable";
+        var query = "SELECT Id, Name, Age, School, City FROM StudentTable";
         var allStudents = databaseConnection.Query<Student>(query).AsList();
 
         return allStudents;
