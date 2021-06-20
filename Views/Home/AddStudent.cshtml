@@ -1,0 +1,23 @@
+﻿
+@model Student
+@{
+    ViewData["Title"] = "Add new Student";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">New Student</h1>
+</div>
+
+<form>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="school">School</label>
+        <input asp-for="School" type="text" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Create">Submit</button>
+    <button type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Students">Cancel</button>
+</form>

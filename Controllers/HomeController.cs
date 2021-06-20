@@ -25,7 +25,26 @@ namespace student_training_app.Controllers
 
         public IActionResult Students()
         {
-            return View("Students", StudentDataStore.GetStudentData());
+            StudentData studentData = new StudentData();
+            var studentList = studentData.GetAllStudents();
+
+            return View("Students", studentList);
+        }
+
+        public IActionResult AddStudent()
+        {
+            return View();
+        }
+
+        public IActionResult Create(Student student)
+        {
+            if (!string.IsNullOrWhiteSpace(student.Name) && !string.IsNullOrWhiteSpace(student.School))
+            {
+                StudentData studentData = new StudentData();
+                studentData.CreateStudent(student);
+            }
+
+            return Students();
         }
     }
 }

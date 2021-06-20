@@ -7,28 +7,38 @@
 <div class="text-center">
     <h1 class="display-4">Students List</h1>
 </div>
-<br/>
-<br/>
+
 <div>
-<table>
-  <tr>
-    <th>Student ID</th>
-    <th>Student Name</th>
-    <th>Age</th>
-    <th>School</th>
-    <th>City</th>
-  </tr>
-  @{
-    foreach(var item in Model)
-    {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@item.Age</td>
-            <td>@item.School</td>
-            <td>@item.City</td>
-        </tr>
-    }
-  }
-</table>
+    <div style="display: flex; justify-content: flex-end">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddStudent">
+            <h3>Add New Student</h3>
+        </a>
+    </div>
+    
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Student ID</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">School</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Age</td>
+                        <td>@item.School</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </div>
+
+

@@ -24,4 +24,11 @@ public class StudentData
 
         return allStudents;
     }
+
+    public void CreateStudent(Student student)
+    {
+        var databaseConnection = GetDatabaseConnection();
+        var query = string.Format( "INSERT into  StudentTable (Name, School) Values ('{0}', '{1}')",student.Name, student.School);
+        databaseConnection.Execute(query);
+    }
 }
