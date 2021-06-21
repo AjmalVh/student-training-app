@@ -6,7 +6,7 @@ using Dapper;
 
 public class StudentData
 {
-    private string ConnectionString { get; set; } = @"Server=.\SQLEXPRESS,1433;Initial Catalog=StudentDatabase;Integrated Security= SSPI";
+    private string ConnectionString { get; set; } = @"Server=.\SQLEXPRESS;1433;Initial Catalog=StudentDatabase;Integrated Security= SSPI";
 
     //Get database connectivity
     public IDbConnection GetDatabaseConnection()
