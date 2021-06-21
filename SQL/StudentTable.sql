@@ -5,13 +5,13 @@ SET QUOTED_IDENTIFIER ON
 GO
     IF NOT EXISTS(SELECT * 
                     FROM sys.databases 
-                    WHERE name = 'Student-Training-db')
+                    WHERE name = 'StudentDatabase')
     BEGIN
-        CREATE DATABASE [Student-Training-db]
+        CREATE DATABASE [StudentDatabase]
     END
 
 GO
-    USE [Student-Training-db]
+    USE [StudentDatabase]
 
 GO
     IF NOT EXISTS (SELECT 'Id'
