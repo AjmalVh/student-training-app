@@ -1,16 +1,5 @@
 /****** Object:  Table [dbo].[StudentTable]    Script Date: 20/06/2021 15:57:52 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-    IF NOT EXISTS(SELECT * 
-                    FROM sys.databases 
-                    WHERE name = 'StudentDatabase')
-    BEGIN
-        CREATE DATABASE [StudentDatabase]
-    END
 
-GO
     USE [StudentDatabase]
 
 GO
