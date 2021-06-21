@@ -6,7 +6,7 @@ using Dapper;
 
 public class StudentData
 {
-    private string ConnectionString { get; set; } = "Server=tcp:avh-db.database.windows.net,1433;Initial Catalog=student-training-db;Persist Security Info=False;User ID=ajmalvh;Password=Password777!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+    private string ConnectionString { get; set; } = @"Server=.\SQLEXPRESS,1433;Initial Catalog=StudentDatabase;Integrated Security= SSPI";
 
     //Get database connectivity
     public IDbConnection GetDatabaseConnection()
